@@ -7,21 +7,22 @@ import './App.css';
 // @observe r
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='user-interface'>
+      <div className='box nav-bar'>Navbar</div>
+      <div className='box article-link-box'>Article Link Box</div>
+      <div className='box article-tiltle'>Article Title</div>
+      
+      {/* <div className='box article-author-box'>
+          <div className='box article-author-pic'>Pic</div>
+          <div className='box article-author-line'>Line</div>
+          <div className='box article-author-read-time'>10-20min</div>
+      </div> */}
+      
+      <div className='box article-box'>Article Box</div>
+      <div className='box vocabulary-box'>Vocabulary Box</div>
+      <div className='box quiz-box'>Quiz Box</div>
+      <div className='box statistics-box'>Statistics Box</div>
+      
     </div>
   );
 }
