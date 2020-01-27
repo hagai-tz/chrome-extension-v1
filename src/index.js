@@ -4,7 +4,20 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { Provider } from 'mobx-react'
+import { ProcessedData } from '../src/stores/ArticleRawData'
+
+// let articleRawData = new ArticleRawData()
+let processedData = new ProcessedData()
+
+const stores = { processedData }
+// const stores = { articleRawData, processedData }
+
+
+
+ReactDOM.render( <Provider {...stores} >
+                    <App/>
+                 </Provider> , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -1,0 +1,33 @@
+
+  /* author box */
+  #article-author-box{
+    grid-column:30/80 ;
+    grid-row:12/16 ;
+    background: lightgray;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  
+  .article-author-pic{
+    align-self: center;
+    grid-column: 1;
+    grid-row: 1/4;
+    border: 1px solid;
+  
+  
+  }
+  .article-author-line {
+    grid-column:2/7;
+    grid-row: 1 ;
+    font-size: xx-small;
+  }
+  .article-author-read-time{
+    grid-column:2/7;
+    grid-row: 3;
+    font-size: xx-small;
+  
+  }
+  
+  

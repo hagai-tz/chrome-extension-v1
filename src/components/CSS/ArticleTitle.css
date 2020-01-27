@@ -1,0 +1,12 @@
+
+  
+  #article-title{
+    grid-column:30/80 ;
+    grid-row:6/16 ;
+    background: lightgray;
+    /* border: 1px solid black; */
+    text-align: center;
+    
+    
+  }
+  

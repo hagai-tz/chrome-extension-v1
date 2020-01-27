@@ -1,0 +1,48 @@
+@import "/node_modules/antd/dist/antd.css";
+
+
+#nav-log-top-left{
+    grid-row: 1;
+    grid-column: 1;
+    font-size: 30px;
+    text-align: center;
+
+
+}
+
+#nav-bar{
+    grid-column:1/8 ;
+    grid-row:1/102 ;
+    background: lightgray;
+    width: 60px;
+    min-width: 60px;
+    display: grid;
+    grid-template-rows: repeat(12, 1fr) ;
+    
+  }
+
+  .slider{
+      grid-row: 10/12 ;
+      grid-column:1 ;
+      align-self: center;
+      justify-self: center ;
+    /* height: 10px; */
+    }
+    
+.hard{
+    grid-row: 12 ;
+    grid-column:1 ;
+    justify-self: center ;
+    /* align-self: center; */
+    margin: 8px;
+
+  }
+
+.easy{
+    grid-row: 9 ;
+    grid-column:1 ;
+    justify-self: center ;
+    align-self: flex-end;
+    margin: 10px;
+
+  }
