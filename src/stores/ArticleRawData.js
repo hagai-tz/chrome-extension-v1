@@ -10,8 +10,8 @@ import axios from 'axios'
 export class ProcessedData {
 
     @observable rawData = []
-    @action createWebsiteData = async () => {
-        let data = await axios.get(`http://localhost:8000/`)
+    @action createWebsiteData = async (url) => {
+        let data = await axios.get(`http://localhost:8000/url?url=${url}`)
         this.rawData = data.data
         console.log(data)
         

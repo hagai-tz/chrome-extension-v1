@@ -13,16 +13,26 @@
     "content_scripts": [
       {
         "matches": ["http://*/*", "https://*/*"],
-        // "css": ["myStyles.css"],
-        "js": ["contentScript.js"],
-        "run_at": "document_idle"
-
+        "css": ["/static/css/app.css", "/static/css/content.css"],
+        "js": ["content.js"],
+        "run_at": "document_end"
       }
     ],
+
+    // "content_scripts": [
+    //   {
+    //     "matches": ["http://*/*", "https://*/*"],
+    //     // "css": ["myStyles.css"],
+    //     "js": ["contentScript.js"],
+    //     "run_at": "document_idle"
+
+    //   }
+    // ],
 
 
   "browser_action": {
       // "default_popup": "popup.html",
+
       "default_icon": {
           // "16": "images/Frantz16.png",
           // "32": "images/Frantz32.png",
