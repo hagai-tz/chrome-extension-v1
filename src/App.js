@@ -20,34 +20,21 @@ import axios from 'axios';
 @observer
 class App extends Component {
 
-       componentDidMount () {
-        this.props.processedData.createWebsiteData()
-        console.log(this.props)
-        // console.log(this.props.location.query.url)
-        // let newData = await axios.get(`http://localhost:3000/url`)
-        // this.props.processedData.addRawDataToAppStore(newData.data)
-        // console.log(this.props)
-           
-      }
-    
-      
     render ()
       {
-        console.log(this.props.location)
 
   return (
    
     <Router>
         <div id='user-interface'>
           <Nav/>
-          <ArticleLink/>
-          <ArticleTitle />
-          <ArticleAuthor/>
+          <ArticleLink />
+          <ArticleTitle /> 
+          <ArticleAuthor />
           <ArticleContent />
           <Route path='/url' exact render={({match}) => <GetURL match={match} /> } />
           {/* <VocabularyBox/> */}
-
-
+          
         </div>
         
     </Router>

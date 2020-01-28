@@ -11,8 +11,7 @@ class ArticleTitle extends Component {
     render() {
         console.log(this.props)
         return (
-            <div></div>
-            // <h1 id='article-title'>{this.props.processedData.rawData[this.props.processedData.rawData.length-1]}</h1>
+            <h1 id='article-title'>{this.props.processedData.rawData.title}</h1>
         );
     }
 }

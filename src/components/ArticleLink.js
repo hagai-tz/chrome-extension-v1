@@ -10,7 +10,7 @@ import ArticleRawData from '../stores/ArticleRawData'
 class ArticleLink extends Component {
     render() {
         return (
-            <h4 id='article-link-box'>https://www.ycombinator.com/ask-yc-best-friends-cofounders/</h4>
+            <h4 id='article-link-box'>{this.props.processedData.rawData.link} </h4>
         );
     }
 }
