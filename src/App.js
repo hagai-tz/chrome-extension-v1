@@ -20,8 +20,13 @@ import axios from 'axios';
 @observer
 class App extends Component {
 
+  componentDidMount() {
+    this.props.processedData.translationSlider(100)
+  }
+
+
     render ()
-      {
+              {
 
   return (
    

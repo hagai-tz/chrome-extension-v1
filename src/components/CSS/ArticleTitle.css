@@ -2,10 +2,11 @@
   
   #article-title{
     grid-column:30/80 ;
-    grid-row:6/16 ;
-    background: lightgray;
+    grid-row:6/auto ;
+    /* background-color: #C6D1E9; */
     /* border: 1px solid black; */
     text-align: center;
+    size: auto;
     
     
   }

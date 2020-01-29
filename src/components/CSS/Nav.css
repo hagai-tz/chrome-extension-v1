@@ -1,5 +1,14 @@
 @import "/node_modules/antd/dist/antd.css";
 
+.menu-flags{
+    grid-row: 12 ;
+    grid-column:1 ;
+    justify-self: flex-start ;
+    /* align-self: center; */
+    margin: 8px;
+
+}
+
 
 #nav-log-top-left{
     grid-row: 1;
@@ -18,11 +27,19 @@
     min-width: 60px;
     display: grid;
     grid-template-rows: repeat(12, 1fr) ;
+    position:fixed;
+    height: 100vh;
     
   }
 
+.line {
+    grid-row: 11 ;
+    grid-column:1 ;
+    justify-self: center ;
+    align-self: flex-end;
+}
   .slider{
-      grid-row: 10/12 ;
+      grid-row: 9/11 ;
       grid-column:1 ;
       align-self: center;
       justify-self: center ;
@@ -30,7 +47,7 @@
     }
     
 .hard{
-    grid-row: 12 ;
+    grid-row: 11 ;
     grid-column:1 ;
     justify-self: center ;
     /* align-self: center; */
@@ -39,7 +56,7 @@
   }
 
 .easy{
-    grid-row: 9 ;
+    grid-row: 8 ;
     grid-column:1 ;
     justify-self: center ;
     align-self: flex-end;

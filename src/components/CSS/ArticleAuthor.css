@@ -2,12 +2,12 @@
   /* author box */
   #article-author-box{
     grid-column:30/80 ;
-    grid-row:12/16 ;
+    grid-row:16 ;
     background: lightgray;
     display: grid;
     grid-gap: 2px;
-    grid-template-columns: 1fr 6fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns:  6fr;
+    grid-template-rows: 1fr 1fr;
   }
   
   .article-author-pic{
@@ -19,14 +19,16 @@
   
   }
   .article-author-line {
-    grid-column:2/7;
+    grid-column:1;
     grid-row: 1 ;
-    font-size: xx-small;
+    font-size: small;
+    padding: 5px;
   }
   .article-author-read-time{
-    grid-column:2/7;
-    grid-row: 3;
-    font-size: xx-small;
+    grid-column:1;
+    grid-row: 2;
+    font-size: small;
+    padding: 5px;
   
   }
   

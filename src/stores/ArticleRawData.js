@@ -16,8 +16,8 @@ export class ProcessedData {
 
     @action translationSlider = (difficultyLevel) => {
         console.log("im the slider value", difficultyLevel)
-        // this.difficultyLevelValue = difficultyLevel
-        this.difficultyLevelValue = `{color: "red"}`
+        this.difficultyLevelValue = difficultyLevel
+        // this.difficultyLevelValue = `{color: "red"}`
 
         // switch (true) {
         //     case difficultyLevel > 50:
