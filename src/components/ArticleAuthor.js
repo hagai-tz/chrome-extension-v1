@@ -6,6 +6,7 @@ import './CSS/ArticleAuthor.css'
 import { observer, action, inject } from 'mobx-react'
 import ArticleRawData from '../stores/ArticleRawData'
 
+
 @inject("processedData")
 
 @observer

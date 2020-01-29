@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { Icon, Slider } from 'antd';
+import { Icon, Slider, Menu, Dropdown } from 'antd';
 import "antd/dist/antd.css";
 import './CSS/Nav.css'
 
 import { observer, action, inject } from 'mobx-react'
 import ArticleRawData from '../stores/ArticleRawData'
-import ReactFlagsSelect from 'react-flags-select';
 
 
 
@@ -15,20 +14,28 @@ import ReactFlagsSelect from 'react-flags-select';
 class Nav extends Component {
 
     
-    render() {
 
+    languageHandler = (e) => {
+        console.log(e)
+        console.log(e.target.value)
+        this.props.processedData.changeTranslationLanguage(e.target.value)
+    }
+    render() {
+        const langs = ["HE", "EN", "FR", "AR", "ES", "DE", "SE"]
         const logo = "<p>"
         return (
             <div id='nav-bar'>
                 <span id='nav-log-top-left'>{logo}
                 </span>
-                {/* <Icon type="font-colors" style={{ fontSize: '45px', padding:'5px' }} /> */}
+                {/* <button lang='ar' onClick={this.languageHandler} >ar</button> */}
                 <Slider vertical defaultValue={100} onChange={this.props.processedData.translationSlider} className='slider'/>
                 <span className='easy'>Easy</span>
                 <span className='hard'>Hard</span>
                 <Icon className='line' type="line" style={{ fontSize: '15px', alignItems: 'center' }} />
-                <ReactFlagsSelect className='menu-flags' countries={["US", "GB", "FR", "DE", "IT", "NG"]} selectedSize={10} optionsSize={6} alignOptions="center"/>
 
+            <select onChange={this.languageHandler} className='menu-flags'>
+                     {langs.map(lang => <option value={lang}>{lang}</option>)}
+            </select>
 
                 
             </div>
@@ -37,3 +44,8 @@ class Nav extends Component {
 }
 
 export default Nav;
+
+
+
+
+

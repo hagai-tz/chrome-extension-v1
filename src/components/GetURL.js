@@ -14,6 +14,7 @@ class GetURL extends Component {
         
         console.log(params.get("url"));
         let sendUrl = params.get("url")
+        this.props.processedData.websiteURL = sendUrl
         this.props.processedData.createWebsiteData(sendUrl)
 
     }
