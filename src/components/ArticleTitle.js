@@ -11,7 +11,11 @@ class ArticleTitle extends Component {
     render() {
         console.log(this.props)
         return (
-            <h1 id='article-title'>{this.props.processedData.rawData.title}</h1>
+            <div id='article-title'>
+                <h1 >{this.props.processedData.rawData.title}</h1>
+                
+
+            </div>
         );
     }
 }

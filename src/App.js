@@ -21,7 +21,7 @@ import axios from 'axios';
 class App extends Component {
 
   componentDidMount() {
-    this.props.processedData.translationSlider(100)
+    this.props.processedData.translationSlider(60)
   }
 
 

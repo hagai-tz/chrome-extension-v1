@@ -22,7 +22,7 @@ class ArticleContent extends Component {
                         return (
                             <span className='word-ul'>
                                 <span className="word"> {word.word} </span>
-                                <span className='translatedWord' difficultyLevel={ word.difficultyLevel } style={ (this.props.processedData.difficultyLevelValue>word.difficultyLevel ? null: { visibility: "hidden", transition:"visibility 1s"} )}> {word.translatedWord}</span>
+                                <span className='translatedWord' difficultyLevel={ word.difficultyLevel } style={ (100-this.props.processedData.difficultyLevelValue<word.difficultyLevel ? null: { visibility: "hidden", transition:"visibility 1s"} )}> {word.translatedWord}</span>
                             </span>
                         )
                     })
