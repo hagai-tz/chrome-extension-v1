@@ -5,12 +5,8 @@ import "antd/dist/antd.css";
 import './CSS/Nav.css'
 import mainLogo from'../img/Trial Logo Design1.png';
 
-
-
-
 import { observer, action, inject } from 'mobx-react'
 import ArticleRawData from '../stores/ArticleRawData'
-
 
 
 @inject("processedData")
