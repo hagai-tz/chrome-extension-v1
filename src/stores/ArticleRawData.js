@@ -10,7 +10,7 @@ export class ProcessedData {
     @action createWebsiteData = async (url) => {
         let data = await axios.get(`http://localhost:8000/url?url=${this.websiteURL}&lang=he`)
         console.log(data)
-        this.rawData = data.data
+        this.rawData = data.data[0] ? data.data[0].translatedArticleContent : data.data.translatedArticleContent
         console.log(this.rawData)
 
     }

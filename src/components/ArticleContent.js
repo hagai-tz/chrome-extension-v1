@@ -12,6 +12,8 @@ import ArticleRawData from '../stores/ArticleRawData'
 class ArticleContent extends Component {
     
     render() {
+        console.log("I'm props", this.props.processedData.rawData)
+        
         console.log("I'm content", this.props.processedData.rawData.content)
 
 
