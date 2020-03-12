@@ -1,29 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
-// import { observer } from 'mobx-react'
+
+//Components
+import Nav from './components/Nav';
+import ArticleTitle from './components/ArticleTitle';
+import VocabularyBox from './components/VocabularyBox';
+import ArticleContent from './components/ArticleContent';
+import ArticleLink from './components/ArticleLink'
+import ArticleAuthor from './components/ArticleAuthor'
+import GetURL from './components/GetURL'
+
+import { observer, action, inject } from 'mobx-react'
+import ArticleRawData from './stores/ArticleRawData'
+import axios from 'axios';
+
+@inject( "processedData" )
+
+@observer
+class App extends Component {
+
+  componentDidMount() {
+    this.props.processedData.translationSlider(60)
+  }
 
 
-// @observe r
-function App() {
+    render ()
+              {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   
+    <Router>
+        <div id='user-interface'>
+          <Nav/>
+          <ArticleLink />
+          <ArticleTitle /> 
+          <ArticleAuthor />
+          <ArticleContent />
+          <Route path='/url' exact render={({match}) => <GetURL match={match} /> } />
+          {/* <VocabularyBox/> */}
+          
+        </div>
+        
+    </Router>
   );
+  }
 }
 
 export default App;
